@@ -18,7 +18,6 @@ class CodificadorEtiqueta:
 
         self.codificador = resultado
         self.inv_codificador = {v: k for k, v in resultado.items()}
-        return self.inv_codificador
 
     def transformar(self, y):
 

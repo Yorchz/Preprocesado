@@ -30,7 +30,7 @@ class Escalar:
     def ajustar_l_list(self, y):
 
         for i in range(len(y)):
-            self.maximos_minimos.append((max(y[i]), min(y[i])))
+            self.maximos_minimos.append([max(y[i]), min(y[i])])
 
     def ajustar_min_mix(self, miin, maax):
         self.max = maax
@@ -61,8 +61,7 @@ class Escalar:
             return self.matriz_tranformar_inv(x)
 
     def matriz_tranformar(self, x):
-        for i in range(len(x[0])):
-            print('a')
+        for i in range(len(x)):
             self.Xmax = self.maximos_minimos[i][0]
             self.Xmin = self.maximos_minimos[i][1]
 
@@ -74,8 +73,7 @@ class Escalar:
                 self.Xmax_minus_Xmin() for i in x]
 
     def matriz_tranformar_inv(self, x):
-        for i in range(len(x[0])):
-            print('a')
+        for i in range(len(x)):
             self.Xmax = self.maximos_minimos[i][0]
             self.Xmin = self.maximos_minimos[i][1]
 

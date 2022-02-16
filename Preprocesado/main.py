@@ -1,12 +1,13 @@
 from Preprocesado.Escalar import Escalar
 import numpy as np
 
-prueba = np.array([[5, 2, 6, 9, 3], [6, 7, 6, 4, 1], [8, 4, 4, 7, 0]])
+vector0 = np.array([5, 2, 6, 9, 3])
+vector = np.array([[1, 7, 5, 2], [9, 6, 3, 4], [2, 1, 5, 6], [7, 8, 4, 6]])
 
 escalar = Escalar()
 
-escalar.ajustar(prueba)
-print(escalar.transformar(prueba))
-print(escalar.transformar_inv(escalar.transformar(prueba)))
+escalar.ajustar(vector0)
+print(escalar.transformar(vector0))
+print(escalar.transformar_inv(escalar.transformar(vector0)))
 
 

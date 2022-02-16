@@ -1,3 +1,5 @@
+import numpy as np
+
 class Escalar:
 
     def __init__(self):
@@ -10,7 +12,7 @@ class Escalar:
 
     def ajustar(self, x, miin=-1, maax=1):
 
-        if isinstance(x[0], (int, float)):
+        if isinstance(x[0], (int, float, np.int, np.float)):
             self.ajustar_list(x)
             self.ajustar_min_mix(miin, maax)
             self.condicional = 1
